@@ -28,17 +28,15 @@ const InputFormField: React.FC<InputFormFieldProps> = ({ control, name, label, p
         name={name}
         render={({ field }) => (
           <FormItem>
-            <div className='grid grid-cols-1 gap-2'>
-              <div className='grid grid-flow-col items-center gap-10 text-sm'>
-                <div>
-                  <Label className='text-sm'>{label}:</Label>
-                </div>
-                <div>
-                  <FormControl>
-                    <Input {...field} placeholder={placeholder} />
-                  </FormControl>
-                  <FormMessage />
-                </div>
+            <div className='flex items-center justify-between gap-5 text-sm'>
+              <div>
+                <Label>{label}:</Label>
+              </div>
+              <div>
+                <FormControl>
+                  <Input {...field} placeholder={placeholder} />
+                </FormControl>
+                <FormMessage />
               </div>
             </div>
           </FormItem>
